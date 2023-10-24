@@ -36,10 +36,10 @@
  *                P4: [min: 0, max: 9]
  *   Options: [OFF (port disabled): 0, 2400: 1, 9600: 2, 19200: 3, 38400: 4, 57600: 5, 115200: 6, 250000: 7, 500000: 8, 1000000: 9]
  */
-#define SP_1 6  // Default: 6
-#define SP_2 0  // Default: 0
-#define SP_3 0  // Default: 0
-#define SP_4 0  // Default: 0
+#define SP_1 7  // Default: 6
+#define SP_2 7  // Default: 0
+#define SP_3 7  // Default: 0
+#define SP_4 7  // Default: 0
 
 /**
  * TX Slots
@@ -62,7 +62,7 @@
  *
  *   Value range: [min: 2, max: 16]
  */
-#define TX_SLOTS 2  // Default: 1
+#define TX_SLOTS 8  // Default: 1
 
 /**
  * Advanced OK
@@ -78,7 +78,7 @@
  *
  *   Options: [disable: 0, enable: 1]
  */
-#define ADVANCED_OK 0  // Default: 0
+#define ADVANCED_OK 1  // Default: 0
 
 /**
  * Emulated M600
@@ -177,12 +177,12 @@
  */
 #define TITLE_BACKGROUND_COLOR  1  // Title background color (Default: 1)
 #define MENU_BACKGROUND_COLOR   1  // Menu background color (Default: 1)
-#define MENU_FONT_COLOR         0  // Menu font color (Default: 0)
+#define MENU_FONT_COLOR         4  // Menu font color (Default: 0)
 #define REMINDER_FONT_COLOR     2  // Reminder font color, such as: "No print attached", "Busy processing", etc. (Default: 2)
-#define STATUS_FONT_COLOR       5  // Status (e.g. volume reminder, ABL probing point etc.) font color, such as: "Card inserted", "Card removed" (Default: 5)
-#define STATUS_XYZ_BG_COLOR    15  // Background color for X Y Z position display in Status Screen menu (Default: 15)
-#define LIST_BORDER_COLOR      15  // List View border color (Default: 15)
-#define LIST_BUTTON_BG_COLOR   15  // List View button background color (Default: 15)
+#define STATUS_FONT_COLOR       12  // Status (e.g. volume reminder, ABL probing point etc.) font color, such as: "Card inserted", "Card removed" (Default: 5)
+#define STATUS_XYZ_BG_COLOR    1  // Background color for X Y Z position display in Status Screen menu (Default: 15)
+#define LIST_BORDER_COLOR      1  // List View border color (Default: 15)
+#define LIST_BUTTON_BG_COLOR   1  // List View button background color (Default: 15)
 
 // Mesh Leveling Display Colors (Mesh Editor)
 // Set the colors used for drawing the mesh with the minimum and maximum value in the grid.
@@ -211,7 +211,7 @@
  *     POPUP: Display a popup window for user confirmation.
  *     TOAST: A non-blocking Toast notification is displayed for few seconds. No user interaction is needed.
  */
-#define ACK_NOTIFICATION 1  // Default: 1
+#define ACK_NOTIFICATION 2  // Default: 1
 
 /**
  * Files Sorting
@@ -228,7 +228,7 @@
  * Display files in list mode instead of icon mode.
  *   Options: [disable: 0, enable: 1]
  */
-#define FILES_LIST_MODE 1  // Default: 1
+#define FILES_LIST_MODE 0  // Default: 1
 
 /**
  * Filename Extension
@@ -250,7 +250,7 @@
  * Show persistent temperature info in all menus.
  *   Options: [disable: 0, enable: 1]
  */
-#define PERSISTENT_INFO 0  // Default: 0
+#define PERSISTENT_INFO 1  // Default: 0
 
 /**
  * Temperature And Wait ACK In Terminal
@@ -271,7 +271,7 @@
  *
  *   Options: [disable: 0, enable: 1]
  */
-#define NOTIFICATION_M117 0  // Default: 0
+#define NOTIFICATION_M117 1  // Default: 0
 
 /**
  * Progress Source
@@ -332,7 +332,7 @@
  *
  *   Options: [Layer height: 0, Layer number: 1, Both - height & number: 2]
  */
-#define LAYER_DISP_TYPE 0  // Default: 0
+#define LAYER_DISP_TYPE 2  // Default: 0
 
 //================================================================================
 //============================= Marlin Mode Settings =============================
@@ -357,7 +357,7 @@
  * no matter which mode the TFT is in.
  *   Options: [disable: 0, enable: 1]
  */
-#define SERIAL_ALWAYS_ON 0  // Default: 0
+#define SERIAL_ALWAYS_ON 1  // Default: 0
 
 /**
  * Marlin Mode Background & Font Colors
@@ -370,7 +370,7 @@
  *             ORANGE: 8, PURPLE: 9, LIME: 10, BROWN: 11, DARKBLUE: 12, DARKGREEN: 13,    GRAY: 14, DARKGRAY: 15]
  */
 #define MARLIN_BACKGROUND_COLOR 1  // Marlin Mode background color (Default: 1)
-#define MARLIN_FONT_COLOR       0  // Marlin Mode font color (Default: 0)
+#define MARLIN_FONT_COLOR       4  // Marlin Mode font color (Default: 0)
 
 /**
  * Fullscreen Marlin Mode
@@ -380,7 +380,7 @@
  *
  *   Options: [disable: 0, enable: 1]
  */
-#define MARLIN_FULLSCREEN 0  // Default: 0
+#define MARLIN_FULLSCREEN 1  // Default: 0
 
 /**
  * Show Marlin Mode Title
@@ -394,7 +394,7 @@
  * Banner text displayed at the top of the TFT in Marlin Mode.
  *   Value range: [min: 3, max: 20 characters]
  */
-#define MARLIN_TITLE "Marlin Mode"  // Default: "Marlin Mode"
+#define MARLIN_TITLE "OldMan Mode"  // Default: "Marlin Mode"
 
 /**
  * Marlin Mode Type
@@ -450,7 +450,7 @@
  * Fan Count
  *   Value range: [min: 1, max: 6]
  */
-#define FAN_COUNT 1  // Default: 1
+#define FAN_COUNT 2  // Default: 1
 
 /**
  * Controller Fan Support
@@ -468,7 +468,7 @@
  *                bed:     [min: 20, max: 400]
  *                chamber: [min: 20, max: 200]
  */
-#define MAX_TEMP {275, 275, 275, 275, 275, 275, 150, 60}  // Default: {275, 275, 275, 275, 275, 275, 150, 60}
+#define MAX_TEMP {350, 275, 275, 275, 275, 275, 110, 60}  // Default: {275, 275, 275, 275, 275, 275, 150, 60}
 
 /**
  * Cold Extrusion Minimum Temperature
@@ -490,6 +490,9 @@
  */
 #define FAN_MAX {255, 255, 255, 255, 255, 255, 255, 255}  // Default: {255, 255, 255, 255, 255, 255, 255, 255}
 
+// The size of the printable area
+#define X_BED_SIZE 377
+#define Y_BED_SIZE 358
 /**
  * Machine Size / Build Area
  * The TFT will auto-detect the machine size (min and max) in Marlin firmware (requires
@@ -499,12 +502,12 @@
  *   Unit: [distance in mm]
  *   Value range: [min: -2000, max: 2000]
  */
-#define X_MIN_POS   0  // Default: 0
-#define Y_MIN_POS   0  // Default: 0
+#define X_MIN_POS -20  // Default: 0
+#define Y_MIN_POS   1  // Default: 0
 #define Z_MIN_POS   0  // Default: 0
-#define X_MAX_POS 235  // Default: 235
-#define Y_MAX_POS 235  // Default: 235
-#define Z_MAX_POS 250  // Default: 250
+#define X_MAX_POS X_BED_SIZE + X_MIN_POS   // Default: 235
+#define Y_MAX_POS Y_BED_SIZE + Y_MIN_POS   // Default: 235
+#define Z_MAX_POS 400  // Default: 250
 
 /**
  * X & Y Move Speeds/Feedrates
@@ -550,7 +553,7 @@
  *
  *   Options: [disable: 0, enable: 1]
  */
-#define AUTO_LOAD_LEVELING 0  // Default: 0
+#define AUTO_LOAD_LEVELING 1  // Default: 0
 
 /**
  * Onboard / Printer Media
@@ -626,10 +629,10 @@
  *   Unit: [feedrate in mm/min]
  *   Value range: [min: 10, max: 12000]
  */
-#define NOZZLE_PAUSE_RETRACT_LENGTH               15.0f  // (mm) (Default: 15.0f)
-#define NOZZLE_RESUME_PURGE_LENGTH                16.0f  // (mm) (Default: 16.0f)
-#define NOZZLE_PAUSE_X_POSITION     (X_MIN_POS + 10.0f)  // (mm) (Default: 10.0f)
-#define NOZZLE_PAUSE_Y_POSITION     (Y_MIN_POS + 10.0f)  // (mm) (Default: 10.0f)
+#define NOZZLE_PAUSE_RETRACT_LENGTH               6.0f  // (mm) (Default: 15.0f)
+#define NOZZLE_RESUME_PURGE_LENGTH                2.0f  // (mm) (Default: 16.0f)
+#define NOZZLE_PAUSE_X_POSITION     (X_MIN_POS + 15.0f)  // (mm) (Default: 10.0f)
+#define NOZZLE_PAUSE_Y_POSITION     (Y_MIN_POS + 15.0f)  // (mm) (Default: 10.0f)
 #define NOZZLE_PAUSE_Z_RAISE                      10.0f  // (mm) (Default: 10.0f)
 #define NOZZLE_PAUSE_XY_FEEDRATE                   6000  // (mm/min) X and Y axes feedrate (Default: 6000)
 #define NOZZLE_PAUSE_Z_FEEDRATE                    6000  // (mm/min) Z axis feedrate (Default: 6000)
@@ -665,7 +668,7 @@
  *   Unit: [feedrate in mm/min]
  *   Value range: [min: 10, max: 12000]
  */
-#define LEVELING_EDGE_DISTANCE    20  // (mm) Inset distance from bed's edge for calculating leveling point location (Default: 20)
+#define LEVELING_EDGE_DISTANCE    57  // (mm) Inset distance from bed's edge for calculating leveling point location (Default: 20)
 #define LEVELING_Z_POS          0.2f  // (mm) Z-axis position when nozzle stays for leveling (Default: 0.2f)
 #define LEVELING_Z_RAISE       10.0f  // (mm) Z-axis position when nozzle move to next point (Default: 10.0f)
 #define LEVELING_XY_FEEDRATE    6000  // (mm/min) X and Y axes move feedrate (Default: 6000)
@@ -682,9 +685,9 @@
  *   Format: [X<option> Y<option> Z<option> LY<option>]
  *   Options: [disable: 0, enable: 1]
  */
-#define INVERTED_X_AXIS  0  // Default: 0
-#define INVERTED_Y_AXIS  0  // Default: 0
-#define INVERTED_Z_AXIS  0  // Default: 0
+#define INVERTED_X_AXIS  1  // Default: 0
+#define INVERTED_Y_AXIS  1  // Default: 0
+#define INVERTED_Z_AXIS  1  // Default: 0
 #define INVERTED_LY_AXIS 0  // Default: 0
 
 /**
@@ -732,7 +735,7 @@
  *
  *   Options: [disable: 0, enable: 1]
  */
-#define Z_STEPPER_ALIGNEMENT 0  // Default: 0
+#define Z_STEPPER_ALIGNEMENT 1  // Default: 0
 
 /**
  * TouchMI Settings (ABL)
@@ -751,8 +754,8 @@
  *                bed temp:    [min: 20, max: 400]
  */
 #define PREHEAT_LABELS {"PLA", "PETG", "ABS", "WOOD", "TPU", "NYLON"}  // Default: {"PLA", "PETG", "ABS", "WOOD", "TPU", "NYLON"}
-#define PREHEAT_HOTEND {200,   240,    230,   170,    220,   250}      // Default: {200,   240,    230,   170,    220,   250}
-#define PREHEAT_BED    { 60,    70,     90,    50,     50,    90}      // Default: { 60,    70,     90,    50,     50,    90}
+#define PREHEAT_HOTEND {200,   245,    230,   195,    220,   250}      // Default: {200,   240,    230,   170,    220,   250}
+#define PREHEAT_BED    { 68,    70,     90,    65,     55,    90}      // Default: { 60,    70,     90,    50,     50,    90}
 
 //================================================================================
 //============================ Power Supply Settings =============================
@@ -813,14 +816,14 @@
  * Enable it in case filament runout is triggered by a HIGH signal.
  *   Options: [disable: 0, enable: 1]
  */
-#define FIL_RUNOUT_INVERTED 1  // Default: 1
+#define FIL_RUNOUT_INVERTED 0  // Default: 1
 
 /**
  * NC (Normal Close) Filament Runout Sensor
  * The sensor is of type NC.
  *   Options: [Normal Open: 0, Normal Close: 1]
  */
-#define FIL_RUNOUT_NC 1  // Default: 1
+#define FIL_RUNOUT_NC 0  // Default: 1
 
 /**
  * Filament Runout Noise Threshold
@@ -884,7 +887,7 @@
  * Enable backup power/UPS to move Z axis on power loss.
  *   Options: [disable: 0, enable: 1]
  */
-#define BTT_MINI_UPS 0  // Default: 0
+#define BTT_MINI_UPS 1  // Default: 0
 
 //================================================================================
 //======================== Other Device-Specific Settings ========================
@@ -917,7 +920,7 @@
  *   Options: [OFF: 0, 5%: 1, 10%: 2, 20%: 3, 30%: 4, 40%: 5, 50%: 6, 60%: 7, 70%: 8, 80%: 9, 90%: 10, 100%: 11]
  */
 #define LCD_BRIGHTNESS      11  // LCD brightness level (Default: 11)
-#define LCD_IDLE_BRIGHTNESS  5  // LCD brightness level when device is idle (Default: 5)
+#define LCD_IDLE_BRIGHTNESS  0  // LCD brightness level when device is idle (Default: 5)
 
 /**
  * LCD Idle Time (only for TFT28/TFT35/TFT43/TFT50/TFT70 V3.0)
@@ -925,7 +928,7 @@
  * period of the LCD idle time.
  *   Options: [OFF: 0, 5sec: 1, 10sec: 2, 30sec: 3, 1min: 4, 2min: 5, 5min: 6, 10min: 7]
  */
-#define LCD_IDLE_TIME 0  // Default: 0
+#define LCD_IDLE_TIME 7  // Default: 0
 
 // Custom value in seconds. This will be used if LCD_IDLE_TIME is set to 7 (CUSTOM Seconds)
 #define IDLE_TIME_CUSTOM (10 * 60)  // Default: 10 * 60
@@ -1061,9 +1064,9 @@
  * Start, End and Cancel G-code Status
  *   Options: [disable: 0, enable: 1]
  */
-#define START_GCODE_ENABLED  0  // Default: 0
-#define END_GCODE_ENABLED    0  // Default: 0
-#define CANCEL_GCODE_ENABLED 0  // Default: 0
+#define START_GCODE_ENABLED  1  // Default: 0
+#define END_GCODE_ENABLED    1  // Default: 0
+#define CANCEL_GCODE_ENABLED 1  // Default: 0
 
 /**
  * Start, End and Cancel G-code
@@ -1117,25 +1120,25 @@
  * Monitoring Debug
  * Uncomment/Enable to monitor/show system resources usage in Monitoring menu.
  */
-//#define DEBUG_MONITORING  // Default: commented (disabled)
+#define DEBUG_MONITORING  // Default: commented (disabled)
 
 /**
  * Generic Debug
  * Uncomment/Enable to enable arbitrary debug serial communication to SERIAL_DEBUG_PORT defined in board specific Pin_xx.h file.
  */
-//#define DEBUG_SERIAL_GENERIC  // Default: commented (disabled)
+#define DEBUG_SERIAL_GENERIC  // Default: commented (disabled)
 
 /**
  * Serial Communication Debug
  * Uncomment/Enable to forward/dump all serial communication to SERIAL_DEBUG_PORT defined in board specific Pin_xx.h file.
  */
-//#define DEBUG_SERIAL_COMM  // Default: commented (disabled)
+#define DEBUG_SERIAL_COMM  // Default: commented (disabled)
 
 /**
  * Config File Debug
  * Uncomment/Enable to show debug information during config file processing.
  */
-//#define DEBUG_SERIAL_CONFIG  // Default: commented (disabled)
+#define DEBUG_SERIAL_CONFIG  // Default: commented (disabled)
 
 #if defined(DEBUG_SERIAL_GENERIC) || defined(DEBUG_SERIAL_CONFIG) || defined(DEBUG_SERIAL_COMM)
   #define SERIAL_DEBUG_ENABLED
@@ -1192,7 +1195,7 @@
 // Z Fade limits
 #define Z_FADE_MIN_VALUE      0.0f  // Default: 0.0f
 #define Z_FADE_MAX_VALUE     20.0f  // Default: 20.0f
-#define Z_FADE_DEFAULT_VALUE 10.0f  // Default: 10.0f
+#define Z_FADE_DEFAULT_VALUE 4.0f  // Default: 10.0f
 
 // Probe Offset limits
 #define PROBE_Z_OFFSET_MIN_VALUE     -20.0f  // Default: -20.0f
@@ -1202,7 +1205,7 @@
 // Home Offset limits
 #define HOME_Z_OFFSET_MIN_VALUE     -20.0f  // Default: -20.0f
 #define HOME_Z_OFFSET_MAX_VALUE      20.0f  // Default: 20.0f
-#define HOME_Z_OFFSET_DEFAULT_VALUE   0.0f  // Default: 0.0f
+#define HOME_Z_OFFSET_DEFAULT_VALUE   0.9f  // Default: 0.0f
 
 // Babystep limits
 #define BABYSTEP_MIN_VALUE     -5.0f  // Default: -5.0f
@@ -1215,8 +1218,8 @@
  * Set the maximum number of grid points per dimension.
  *   Value range: [min: 1, max: 15]
  */
-#define MESH_GRID_MAX_POINTS_X 15  // Default: 15
-#define MESH_GRID_MAX_POINTS_Y 15  // Default: 15
+#define MESH_GRID_MAX_POINTS_X 9  // Default: 15
+#define MESH_GRID_MAX_POINTS_Y 9  // Default: 15
 
 /**
  * Bed Leveling Type
@@ -1229,7 +1232,7 @@
  *
  *   Options: [disable: 0, auto-detect: 1, ABL: 2, BBL: 3, UBL: 4, MBL: 5]
  */
-#define BED_LEVELING_TYPE 1  // Default: 1
+#define BED_LEVELING_TYPE 4  // Default: 1
 
 /**
  * MBL Settings
@@ -1371,7 +1374,7 @@
  * Toast Notification Duration (in seconds)
  * Set the duration for displaying toast notification on top of the screen.
  */
-#define TOAST_DURATION 3  // in sec. Default: 3
+#define TOAST_DURATION 10  // in sec. Default: 3
 
 /**
  * Keyboard On Left Side (Mesh Editor, LED Color Custom)
@@ -1424,14 +1427,14 @@
  * The color of the progress bar during print.
  *   Options: [Orange: 0, Yellow: 1, Red: 2, Green: 3, Blue: 4, Cyan: 5, Magenta: 6, Purple: 7, Lime: 8, Gray: 9]
  */
-#define PROGRESS_BAR_COLOR 0  // Default: 0
+#define PROGRESS_BAR_COLOR 3  // Default: 0
 
 /**
  * Progress Bar Layout (Printing menu)
  * Uncomment to enable a progress bar with 10% markers.
  * Comment to enable a standard progress bar.
  */
-//#define MARKED_PROGRESS_BAR  // Default: commented (disabled)
+#define MARKED_PROGRESS_BAR  // Default: commented (disabled)
 
 /**
  * Live Text Common Color Layout (Status Screen menu)
@@ -1440,7 +1443,7 @@
  * (e.g. for THEME_Rep Rap Firmware Dark theme).
  * Comment to use standard colors.
  */
-//#define LIVE_TEXT_COMMON_COLOR  // Default: commented (disabled)
+#define LIVE_TEXT_COMMON_COLOR  // Default: commented (disabled)
 
 /**
  * Show Embedded Thumbnails Of G-code Files
@@ -1462,6 +1465,6 @@
  *                    require dedicated post-processing of gcode files for most slicers.
  *                    "RGB565 bitmap" and "Classic" are used as fallback.
  */
-#define THUMBNAIL_PARSER 0  // Default: 0
+#define THUMBNAIL_PARSER 2  // Default: 0
 
 #endif
