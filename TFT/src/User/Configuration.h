@@ -505,8 +505,8 @@
 #define X_MIN_POS -20  // Default: 0
 #define Y_MIN_POS   1  // Default: 0
 #define Z_MIN_POS   0  // Default: 0
-#define X_MAX_POS 377 //X_BED_SIZE + X_MIN_POS brought over from marlin  // Default: 235
-#define Y_MAX_POS 358 //Y_BED_SIZE + Y_MIN_POS brought over from marlin  // Default: 235
+#define X_MAX_POS 357 //X_BED_SIZE + X_MIN_POS brought over from marlin  // Default: 235
+#define Y_MAX_POS 359 //Y_BED_SIZE + Y_MIN_POS brought over from marlin  // Default: 235
 #define Z_MAX_POS 400  // Default: 250
 
 /**
@@ -528,8 +528,8 @@
  *   Value range: [min: 10, max: 12000]
  */
 #define SPEED_Z_SLOW   500   // Default: 500
-#define SPEED_Z_NORMAL 1000  // Default: 1000
-#define SPEED_Z_FAST   2000  // Default: 2000
+#define SPEED_Z_NORMAL 700  // Default: 1000
+#define SPEED_Z_FAST   1000  // Default: 2000
 
 /**
  * Extruder Speeds/Feedrates
@@ -685,7 +685,7 @@
  *   Format: [X<option> Y<option> Z<option> LY<option>]
  *   Options: [disable: 0, enable: 1]
  */
-#define INVERTED_X_AXIS  1  // Default: 0
+#define INVERTED_X_AXIS  0  // Default: 0
 #define INVERTED_Y_AXIS  1  // Default: 0
 #define INVERTED_Z_AXIS  1  // Default: 0
 #define INVERTED_LY_AXIS 0  // Default: 0
