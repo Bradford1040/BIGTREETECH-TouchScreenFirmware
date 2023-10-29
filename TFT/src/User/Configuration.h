@@ -491,8 +491,8 @@
 #define FAN_MAX {255, 255, 255, 255, 255, 255, 255, 255}  // Default: {255, 255, 255, 255, 255, 255, 255, 255}
 
 // The size of the printable area
-//#define X_BED_SIZE 377
-//#define Y_BED_SIZE 358
+//#define X_BED_SIZE 373
+//#define Y_BED_SIZE 363
 /**
  * Machine Size / Build Area
  * The TFT will auto-detect the machine size (min and max) in Marlin firmware (requires
@@ -502,12 +502,12 @@
  *   Unit: [distance in mm]
  *   Value range: [min: -2000, max: 2000]
  */
-#define X_MIN_POS -20  // Default: 0
-#define Y_MIN_POS   1  // Default: 0
+#define X_MIN_POS   8   // Default: 0
+#define Y_MIN_POS   0  // Default: 0
 #define Z_MIN_POS   0  // Default: 0
-#define X_MAX_POS 357 //X_BED_SIZE + X_MIN_POS brought over from marlin  // Default: 235
-#define Y_MAX_POS 359 //Y_BED_SIZE + Y_MIN_POS brought over from marlin  // Default: 235
-#define Z_MAX_POS 400  // Default: 250
+#define X_MAX_POS 373 //X_BED_SIZE + X_MIN_POS brought over from marlin  // Default: 235
+#define Y_MAX_POS 363 //Y_BED_SIZE + Y_MIN_POS brought over from marlin  // Default: 235
+#define Z_MAX_POS 390  // Default: 250
 
 /**
  * X & Y Move Speeds/Feedrates
