@@ -502,10 +502,10 @@
  *   Unit: [distance in mm]
  *   Value range: [min: -2000, max: 2000]
  */
-#define X_MIN_POS   8   // Default: 0
+#define X_MIN_POS -12  // Default: 0
 #define Y_MIN_POS   0  // Default: 0
 #define Z_MIN_POS   0  // Default: 0
-#define X_MAX_POS 373 //X_BED_SIZE + X_MIN_POS brought over from marlin  // Default: 235
+#define X_MAX_POS 385 //X_BED_SIZE + X_MIN_POS brought over from marlin  // Default: 235
 #define Y_MAX_POS 363 //Y_BED_SIZE + Y_MIN_POS brought over from marlin  // Default: 235
 #define Z_MAX_POS 390  // Default: 250
 
@@ -629,7 +629,7 @@
  *   Unit: [feedrate in mm/min]
  *   Value range: [min: 10, max: 12000]
  */
-#define NOZZLE_PAUSE_RETRACT_LENGTH               6.0f  // (mm) (Default: 15.0f)
+#define NOZZLE_PAUSE_RETRACT_LENGTH               3.0f  // (mm) (Default: 15.0f)
 #define NOZZLE_RESUME_PURGE_LENGTH                2.0f  // (mm) (Default: 16.0f)
 #define NOZZLE_PAUSE_X_POSITION     (X_MIN_POS + 15.0f)  // (mm) (Default: 10.0f)
 #define NOZZLE_PAUSE_Y_POSITION     (Y_MIN_POS + 15.0f)  // (mm) (Default: 10.0f)
