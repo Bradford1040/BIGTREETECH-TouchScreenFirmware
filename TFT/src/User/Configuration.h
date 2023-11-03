@@ -502,11 +502,11 @@
  *   Unit: [distance in mm]
  *   Value range: [min: -2000, max: 2000]
  */
-#define X_MIN_POS -12  // Default: 0
-#define Y_MIN_POS   0  // Default: 0
+#define X_MIN_POS -3  // Default: 0
+#define Y_MIN_POS -20  // Default: 0
 #define Z_MIN_POS   0  // Default: 0
-#define X_MAX_POS 385 //X_BED_SIZE + X_MIN_POS brought over from marlin  // Default: 235
-#define Y_MAX_POS 363 //Y_BED_SIZE + Y_MIN_POS brought over from marlin  // Default: 235
+#define X_MAX_POS 372 //X_BED_SIZE + X_MIN_POS brought over from marlin  // Default: 235
+#define Y_MAX_POS 366 //Y_BED_SIZE + Y_MIN_POS brought over from marlin  // Default: 235
 #define Z_MAX_POS 390  // Default: 250
 
 /**
