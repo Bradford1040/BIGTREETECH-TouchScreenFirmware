@@ -62,7 +62,7 @@
  *
  *   Value range: [min: 2, max: 16]
  */
-#define TX_SLOTS 8  // Default: 1
+#define TX_SLOTS 2  // Default: 1
 
 /**
  * Advanced OK
@@ -243,7 +243,7 @@
  * Show fan speed in percentage. If disabled fan speed will be displayed as PWM values.
  *   Options: [disable: 0, enable: 1]
  */
-#define FAN_SPEED_PERCENTAGE 1  // Default: 1
+#define FAN_SPEED_PERCENTAGE 0  // Default: 1
 
 /**
  * Persistent Temperature Info
@@ -257,7 +257,7 @@
  * Show "temperature" and "wait" ACK in Terminal menu.
  *   Options: [disable: 0, enable: 1]
  */
-#define TERMINAL_ACK 1  // Default: 0
+#define TERMINAL_ACK 0  // Default: 0
 
 /**
  * Notification M117
@@ -535,9 +535,9 @@
  *   Unit: [feedrate in mm/min]
  *   Value range: [min: 10, max: 12000]
  */
-#define EXTRUDE_SLOW_SPEED     60  // Default: 60
-#define EXTRUDE_NORMAL_SPEED  600  // Default: 600
-#define EXTRUDE_FAST_SPEED   1200  // Default: 1200
+#define EXTRUDE_SLOW_SPEED     500  // Default: 60
+#define EXTRUDE_NORMAL_SPEED  1000  // Default: 600
+#define EXTRUDE_FAST_SPEED   2000  // Default: 1200
 
 /**
  * Auto Load Bed Leveling Data
@@ -766,7 +766,7 @@
  * The power supply uses the opposite of this logic to stay OFF.
  *   Options: [disable: 0, enable: 1]
  */
-#define PS_ACTIVE_HIGH 1  // Default: 1
+#define PS_ACTIVE_HIGH 0  // Default: 1
 
 /**
  * Power Supply Auto Shutdown Mode
@@ -813,7 +813,7 @@
  * Enable it in case filament runout is triggered by a HIGH signal.
  *   Options: [disable: 0, enable: 1]
  */
-#define FIL_RUNOUT_INVERTED 1  // Default: 1
+#define FIL_RUNOUT_INVERTED 0  // Default: 1
 
 /**
  * NC (Normal Close) Filament Runout Sensor
@@ -985,7 +985,7 @@
  * If enabled, when the LCD is idle (dimmed) then the knob LED will be also switched off.
  *   Options: [disable: 0, enable: 1]
  */
-#define KNOB_LED_IDLE 1  // Default: 1
+#define KNOB_LED_IDLE 0  // Default: 1
 
 /**
  * Knob LED Pixels (only for TFT28/TFT35_E3/TFT43/TFT50/TFT70 V3.0)
@@ -1061,9 +1061,9 @@
  * Start, End and Cancel G-code Status
  *   Options: [disable: 0, enable: 1]
  */
-#define START_GCODE_ENABLED  1  // Default: 0
-#define END_GCODE_ENABLED    1  // Default: 0
-#define CANCEL_GCODE_ENABLED 1  // Default: 0
+#define START_GCODE_ENABLED  0  // Default: 0
+#define END_GCODE_ENABLED    0  // Default: 0
+#define CANCEL_GCODE_ENABLED 0  // Default: 0
 
 /**
  * Start, End and Cancel G-code
@@ -1192,7 +1192,7 @@
 // Z Fade limits
 #define Z_FADE_MIN_VALUE      0.0f  // Default: 0.0f
 #define Z_FADE_MAX_VALUE     10.0f  // Default: 20.0f
-#define Z_FADE_DEFAULT_VALUE 4.0f  // Default: 10.0f
+#define Z_FADE_DEFAULT_VALUE  4.0f  // Default: 10.0f
 
 // Probe Offset limits
 #define PROBE_Z_OFFSET_MIN_VALUE     -20.0f  // Default: -20.0f
@@ -1202,7 +1202,7 @@
 // Home Offset limits
 #define HOME_Z_OFFSET_MIN_VALUE     -20.0f  // Default: -20.0f
 #define HOME_Z_OFFSET_MAX_VALUE      20.0f  // Default: 20.0f
-#define HOME_Z_OFFSET_DEFAULT_VALUE   0.03f  // Default: 0.0f
+#define HOME_Z_OFFSET_DEFAULT_VALUE  0.00f  // Default: 0.0f
 
 // Babystep limits
 #define BABYSTEP_MIN_VALUE     -5.0f  // Default: -5.0f
@@ -1238,14 +1238,14 @@
  * If not enabled, you can set the desired starting Z height
  * in Marlin fw (MANUAL_PROBE_START_Z in Configuration.h).
  */
-#define MBL_START_Z  // Default: uncommented (enabled)
+//#define MBL_START_Z  // Default: uncommented (enabled)
 
 /**
  * M601: Pause Print
  * PrusaSlicer can add M601 on certain height.
  * Acts here like manual pause.
  */
-#define NOZZLE_PAUSE_M601  // Default: uncommented (enabled)
+//#define NOZZLE_PAUSE_M601  // Default: uncommented (enabled)
 
 /**
  * M701, M702: Marlin Filament Load / Unload G-codes Support
@@ -1335,7 +1335,7 @@
  * Safety Alert
  * If enabled, safety alert popup messages are shown by some menus (e.g. heaters still on when leaving some menus).
  */
-#define SAFETY_ALERT  // Default: uncommented (enabled)
+//#define SAFETY_ALERT  // Default: uncommented (enabled)
 
 /**
  * Smart Home
@@ -1424,7 +1424,7 @@
  * The color of the progress bar during print.
  *   Options: [Orange: 0, Yellow: 1, Red: 2, Green: 3, Blue: 4, Cyan: 5, Magenta: 6, Purple: 7, Lime: 8, Gray: 9]
  */
-#define PROGRESS_BAR_COLOR 4  // Default: 0
+#define PROGRESS_BAR_COLOR 3  // Default: 0
 
 /**
  * Progress Bar Layout (Printing menu)
@@ -1440,7 +1440,7 @@
  * (e.g. for THEME_Rep Rap Firmware Dark theme).
  * Comment to use standard colors.
  */
-#define LIVE_TEXT_COMMON_COLOR  // Default: commented (disabled)
+//#define LIVE_TEXT_COMMON_COLOR  // Default: commented (disabled)
 
 /**
  * Show Embedded Thumbnails Of G-code Files
