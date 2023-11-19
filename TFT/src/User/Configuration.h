@@ -62,7 +62,7 @@
  *
  *   Value range: [min: 2, max: 16]
  */
-#define TX_SLOTS 8  // Default: 1
+#define TX_SLOTS 2  // Default: 1
 
 /**
  * Advanced OK
@@ -114,7 +114,7 @@
  *
  *   Options: [disable: 0, enable: 1]
  */
-#define EVENT_LED 1  // Default: 1
+#define EVENT_LED 0  // Default: 1
 
 /**
  * G-code File Comment Parsing
@@ -197,7 +197,7 @@
  *     Material Light: Light background with dark font color and orange command font color.
  *     High Contrast:  Black background with white font color and orange command font color.
  */
-#define TERMINAL_COLOR_SCHEME 0  // Default: 0
+#define TERMINAL_COLOR_SCHEME 2  // Default: 0
 
 /**
  * Notification Style For ACK Messages
@@ -257,7 +257,7 @@
  * Show "temperature" and "wait" ACK in Terminal menu.
  *   Options: [disable: 0, enable: 1]
  */
-#define TERMINAL_ACK 0  // Default: 0
+#define TERMINAL_ACK 1  // Default: 0
 
 /**
  * Notification M117
@@ -450,7 +450,7 @@
  * Fan Count
  *   Value range: [min: 1, max: 6]
  */
-#define FAN_COUNT 2  // Default: 1
+#define FAN_COUNT 1  // Default: 1
 
 /**
  * Controller Fan Support
@@ -458,7 +458,7 @@
  * firmware supports controller fan (M710).
  *   Options: [disable: 0, enable: 1]
  */
-#define CONTROLLER_FAN 0  // Default: 0
+#define CONTROLLER_FAN 1  // Default: 0
 
 /**
  * Bed / Extruder / Chamber Maximum Temperatures
@@ -506,7 +506,7 @@
 #define Y_MIN_POS -20  // Default: 0
 #define Z_MIN_POS   0  // Default: 0
 #define X_MAX_POS 372 //X_BED_SIZE + X_MIN_POS brought over from marlin  // Default: 235
-#define Y_MAX_POS 366 //Y_BED_SIZE + Y_MIN_POS brought over from marlin  // Default: 235
+#define Y_MAX_POS 351 //Y_BED_SIZE + Y_MIN_POS brought over from marlin  // Default: 235
 #define Z_MAX_POS 390  // Default: 250
 
 /**
@@ -629,10 +629,10 @@
  *   Unit: [feedrate in mm/min]
  *   Value range: [min: 10, max: 12000]
  */
-#define NOZZLE_PAUSE_RETRACT_LENGTH               3.0f  // (mm) (Default: 15.0f)
-#define NOZZLE_RESUME_PURGE_LENGTH                2.0f  // (mm) (Default: 16.0f)
-#define NOZZLE_PAUSE_X_POSITION     (X_MIN_POS + 15.0f)  // (mm) (Default: 10.0f)
-#define NOZZLE_PAUSE_Y_POSITION     (Y_MIN_POS + 15.0f)  // (mm) (Default: 10.0f)
+#define NOZZLE_PAUSE_RETRACT_LENGTH                0.5f  // (mm) (Default: 15.0f)
+#define NOZZLE_RESUME_PURGE_LENGTH                 1.0f  // (mm) (Default: 16.0f)
+#define NOZZLE_PAUSE_X_POSITION                   35.0f  // (mm) (Default: 10.0f)
+#define NOZZLE_PAUSE_Y_POSITION                   35.0f  // (mm) (Default: 10.0f)
 #define NOZZLE_PAUSE_Z_RAISE                      10.0f  // (mm) (Default: 10.0f)
 #define NOZZLE_PAUSE_XY_FEEDRATE                   6000  // (mm/min) X and Y axes feedrate (Default: 6000)
 #define NOZZLE_PAUSE_Z_FEEDRATE                    6000  // (mm/min) Z axis feedrate (Default: 6000)
@@ -668,7 +668,7 @@
  *   Unit: [feedrate in mm/min]
  *   Value range: [min: 10, max: 12000]
  */
-#define LEVELING_EDGE_DISTANCE    57  // (mm) Inset distance from bed's edge for calculating leveling point location (Default: 20)
+#define LEVELING_EDGE_DISTANCE    10  // (mm) Inset distance from bed's edge for calculating leveling point location (Default: 20)
 #define LEVELING_Z_POS          0.2f  // (mm) Z-axis position when nozzle stays for leveling (Default: 0.2f)
 #define LEVELING_Z_RAISE       10.0f  // (mm) Z-axis position when nozzle move to next point (Default: 10.0f)
 #define LEVELING_XY_FEEDRATE    6000  // (mm/min) X and Y axes move feedrate (Default: 6000)
@@ -709,7 +709,7 @@
  *
  *   Options: [disable: 0, enable: 1]
  */
-#define PROBING_Z_OFFSET 1  // Default: 1
+#define PROBING_Z_OFFSET 0  // Default: 1
 
 /**
  * Probing Z Raise (Probe Offset, Mesh Editor)
@@ -753,9 +753,9 @@
  *                hotend temp: [min: 20, max: 1000]
  *                bed temp:    [min: 20, max: 400]
  */
-#define PREHEAT_LABELS {"PLA", "PETG", "ABS", "WOOD", "TPU", "NYLON"}  // Default: {"PLA", "PETG", "ABS", "WOOD", "TPU", "NYLON"}
-#define PREHEAT_HOTEND {200,   245,    230,   195,    220,   250}      // Default: {200,   240,    230,   170,    220,   250}
-#define PREHEAT_BED    { 68,    70,     90,    65,     55,    90}      // Default: { 60,    70,     90,    50,     50,    90}
+#define PREHEAT_LABELS {"WOOD", "PLA", "PLA_PRO", "PLA_PLUS", "PETG", "TPU" "ABS" "NYLON"}  // Default: {"PLA", "PETG", "ABS", "WOOD", "TPU", "NYLON"}
+#define PREHEAT_HOTEND {195,     215,        225,       235,    245,   250,   265,    255}      // Default: {200,   240,    230,   170,    220,   250}
+#define PREHEAT_BED    { 62,      65,         70,        70,     70,    62,    60,     68}      // Default: { 60,    70,     90,    50,     50,    90}
 
 //================================================================================
 //============================ Power Supply Settings =============================
@@ -910,7 +910,7 @@
  *   Options: [disable: 0, enable: 1]
  */
 #define TOUCH_SOUND  1  // Default: 1
-#define TOAST_SOUND  1  // Default: 1
+#define TOAST_SOUND  0  // Default: 1
 #define ALERT_SOUND  1  // Default: 1
 #define HEATER_SOUND 1  // Default: 1
 
@@ -931,7 +931,7 @@
 #define LCD_IDLE_TIME 7  // Default: 0
 
 // Custom value in seconds. This will be used if LCD_IDLE_TIME is set to 7 (CUSTOM Seconds)
-#define IDLE_TIME_CUSTOM (10 * 60)  // Default: 10 * 60
+#define IDLE_TIME_CUSTOM 600  // Default: 10 * 60
 
 /**
  * LCD Lock On Idle (only for TFT28/TFT35/TFT43/TFT50/TFT70 V3.0)
@@ -971,24 +971,24 @@
  * The printer's LED color is configured in "LED_COLOR".
  *   Options: [disable: 0, enable: 1]
  */
-#define LED_ALWAYS_ON 1  // Default: 1
+#define LED_ALWAYS_ON 0  // Default: 1
 
 /**
  * Knob LED Color (only for TFT28/TFT35_E3/TFT43/TFT50/TFT70 V3.0)
  * Knob LED color at startup.
  *   Options: [OFF: 0, WHITE: 1, RED: 2, ORANGE: 3, YELLOW: 4, GREEN: 5, BLUE: 6, INDIGO: 7, VIOLET: 8]
  */
-#define KNOB_LED_COLOR 1  // Default: 1
+#define KNOB_LED_COLOR 0  // Default: 1
 
 // Keep the LED state in Marlin Mode
-#define KEEP_KNOB_LED_COLOR_MARLIN_MODE  // Default: uncommented (enabled)
+//#define KEEP_KNOB_LED_COLOR_MARLIN_MODE  // Default: uncommented (enabled)
 
 /**
  * Knob LED Idle State (only for TFT28/TFT35_E3/TFT43/TFT50/TFT70 V3.0)
  * If enabled, when the LCD is idle (dimmed) then the knob LED will be also switched off.
  *   Options: [disable: 0, enable: 1]
  */
-#define KNOB_LED_IDLE 1  // Default: 1
+#define KNOB_LED_IDLE 0  // Default: 1
 
 /**
  * Knob LED Pixels (only for TFT28/TFT35_E3/TFT43/TFT50/TFT70 V3.0)
@@ -1075,8 +1075,8 @@
  * CANCEL_GCODE will run when a print is cancelled if "CANCEL_GCODE_ENABLED" is enabled.
  *   Value range: [min: 3, max: 75 characters]
  */
-#define START_GCODE  "G28 XY R20\n"
-#define END_GCODE    "M104 S0\nM140 S0\nM107\nM18\n"
+#define START_GCODE  "M75\n"
+#define END_GCODE    "M77\n"
 #define CANCEL_GCODE "M104 S0\nM140 S0\nG28 XY R10\nM107\nM18\n"
 
 //====================================================================================================
@@ -1218,8 +1218,8 @@
  * Set the maximum number of grid points per dimension.
  *   Value range: [min: 1, max: 15]
  */
-#define MESH_GRID_MAX_POINTS_X 9  // Default: 15
-#define MESH_GRID_MAX_POINTS_Y 9  // Default: 15
+#define MESH_GRID_MAX_POINTS_X 10  // Default: 15
+#define MESH_GRID_MAX_POINTS_Y 10  // Default: 15
 
 /**
  * Bed Leveling Type
@@ -1338,7 +1338,7 @@
  * Safety Alert
  * If enabled, safety alert popup messages are shown by some menus (e.g. heaters still on when leaving some menus).
  */
-#define SAFETY_ALERT  // Default: uncommented (enabled)
+//#define SAFETY_ALERT  // Default: uncommented (enabled)
 
 /**
  * Smart Home
@@ -1374,14 +1374,14 @@
  * Toast Notification Duration (in seconds)
  * Set the duration for displaying toast notification on top of the screen.
  */
-#define TOAST_DURATION 10  // in sec. Default: 3
+#define TOAST_DURATION 3  // in sec. Default: 3
 
 /**
  * Keyboard On Left Side (Mesh Editor, LED Color Custom)
  * By default the keyboard is drawn on right side of the screen.
  * Enable KEYBOARD_ON_LEFT to draw the keyboard on left side of the screen.
  */
-//#define KEYBOARD_ON_LEFT  // Default: commented (disabled)
+#define KEYBOARD_ON_LEFT  // Default: commented (disabled)
 
 /**
  * Terminal Keyboard / Numpad Settings
@@ -1403,7 +1403,7 @@
  *                    (Material Light if KEYBOARD_MATERIAL_THEME is enabled).
  *     High Contrast: Use white and black colors for high contrast.
  */
-#define KEYBOARD_COLOR_LAYOUT 0  // Default: 0
+#define KEYBOARD_COLOR_LAYOUT 2  // Default: 0
 
 /**
  * QWERTY/QWERTZ Keyboard Layout (Terminal menu)
@@ -1420,7 +1420,7 @@
  * Uncomment to disable terminal cache during keyboard view.
  * Comment to enable terminal cache during keyboard view.
  */
-#define TERMINAL_KEYBOARD_VIEW_SUPPRESS_ACK  // Default: uncommented (cache suppressed)
+//#define TERMINAL_KEYBOARD_VIEW_SUPPRESS_ACK  // Default: uncommented (cache suppressed)
 
 /**
  * Progress Bar Color (Printing menu)
@@ -1434,7 +1434,7 @@
  * Uncomment to enable a progress bar with 10% markers.
  * Comment to enable a standard progress bar.
  */
-#define MARKED_PROGRESS_BAR  // Default: commented (disabled)
+//#define MARKED_PROGRESS_BAR  // Default: commented (disabled)
 
 /**
  * Live Text Common Color Layout (Status Screen menu)
