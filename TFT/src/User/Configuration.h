@@ -197,7 +197,7 @@
  *     Material Light: Light background with dark font color and orange command font color.
  *     High Contrast:  Black background with white font color and orange command font color.
  */
-#define TERMINAL_COLOR_SCHEME 2  // Default: 0
+#define TERMINAL_COLOR_SCHEME 0  // Default: 0
 
 /**
  * Notification Style For ACK Messages
@@ -1403,7 +1403,7 @@
  *                    (Material Light if KEYBOARD_MATERIAL_THEME is enabled).
  *     High Contrast: Use white and black colors for high contrast.
  */
-#define KEYBOARD_COLOR_LAYOUT 2  // Default: 0
+#define KEYBOARD_COLOR_LAYOUT 0  // Default: 0
 
 /**
  * QWERTY/QWERTZ Keyboard Layout (Terminal menu)
