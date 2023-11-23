@@ -516,9 +516,9 @@
  *   Unit: [feedrate in mm/min]
  *   Value range: [min: 10, max: 12000]
  */
-#define SPEED_XY_SLOW   1000  // Default: 1000
+#define SPEED_XY_SLOW   1500  // Default: 1000
 #define SPEED_XY_NORMAL 3000  // Default: 3000
-#define SPEED_XY_FAST   5000  // Default: 5000
+#define SPEED_XY_FAST   5400  // Default: 5000
 
 /**
  * Z Speeds/Feedrates
@@ -527,9 +527,9 @@
  *   Unit: [feedrate in mm/min]
  *   Value range: [min: 10, max: 12000]
  */
-#define SPEED_Z_SLOW   500   // Default: 500
-#define SPEED_Z_NORMAL 700  // Default: 1000
-#define SPEED_Z_FAST   1000  // Default: 2000
+#define SPEED_Z_SLOW   270   // Default: 500
+#define SPEED_Z_NORMAL 480  // Default: 1000
+#define SPEED_Z_FAST   900  // Default: 2000
 
 /**
  * Extruder Speeds/Feedrates
@@ -629,13 +629,13 @@
  *   Unit: [feedrate in mm/min]
  *   Value range: [min: 10, max: 12000]
  */
-#define NOZZLE_PAUSE_RETRACT_LENGTH                0.5f  // (mm) (Default: 15.0f)
+#define NOZZLE_PAUSE_RETRACT_LENGTH                0.3f  // (mm) (Default: 15.0f)
 #define NOZZLE_RESUME_PURGE_LENGTH                 1.0f  // (mm) (Default: 16.0f)
-#define NOZZLE_PAUSE_X_POSITION                   35.0f  // (mm) (Default: 10.0f)
-#define NOZZLE_PAUSE_Y_POSITION                   35.0f  // (mm) (Default: 10.0f)
-#define NOZZLE_PAUSE_Z_RAISE                      10.0f  // (mm) (Default: 10.0f)
-#define NOZZLE_PAUSE_XY_FEEDRATE                   6000  // (mm/min) X and Y axes feedrate (Default: 6000)
-#define NOZZLE_PAUSE_Z_FEEDRATE                    6000  // (mm/min) Z axis feedrate (Default: 6000)
+#define NOZZLE_PAUSE_X_POSITION                   10.0f  // (mm) (Default: 10.0f)
+#define NOZZLE_PAUSE_Y_POSITION                   50.0f  // (mm) (Default: 10.0f)
+#define NOZZLE_PAUSE_Z_RAISE                      20.0f  // (mm) (Default: 10.0f)
+#define NOZZLE_PAUSE_XY_FEEDRATE                   5400  // (mm/min) X and Y axes feedrate (Default: 6000)
+#define NOZZLE_PAUSE_Z_FEEDRATE                     480  // (mm/min) Z axis feedrate (Default: 6000)
 #define NOZZLE_PAUSE_E_FEEDRATE                     600  // (mm/min) retract & purge feedrate (Default: 600)
 
 /**
@@ -671,8 +671,8 @@
 #define LEVELING_EDGE_DISTANCE    10  // (mm) Inset distance from bed's edge for calculating leveling point location (Default: 20)
 #define LEVELING_Z_POS          0.2f  // (mm) Z-axis position when nozzle stays for leveling (Default: 0.2f)
 #define LEVELING_Z_RAISE       10.0f  // (mm) Z-axis position when nozzle move to next point (Default: 10.0f)
-#define LEVELING_XY_FEEDRATE    6000  // (mm/min) X and Y axes move feedrate (Default: 6000)
-#define LEVELING_Z_FEEDRATE     6000  // (mm/min) Z axis move feedrate (Default: 6000)
+#define LEVELING_XY_FEEDRATE    5400  // (mm/min) X and Y axes move feedrate (Default: 6000)
+#define LEVELING_Z_FEEDRATE      480  // (mm/min) Z axis move feedrate (Default: 6000)
 
 /**
  * Inverted Axes (Manual Leveling, Leveling Corner, Move, Probe Offset)
@@ -753,9 +753,9 @@
  *                hotend temp: [min: 20, max: 1000]
  *                bed temp:    [min: 20, max: 400]
  */
-#define PREHEAT_LABELS {"WOOD", "PLA", "PLA_PRO", "PLA_PLUS", "PETG", "TPU" "ABS" "NYLON"}  // Default: {"PLA", "PETG", "ABS", "WOOD", "TPU", "NYLON"}
-#define PREHEAT_HOTEND {195,     215,        225,       235,    245,   250,   265,    255}      // Default: {200,   240,    230,   170,    220,   250}
-#define PREHEAT_BED    { 62,      65,         70,        70,     70,    62,    60,     68}      // Default: { 60,    70,     90,    50,     50,    90}
+#define PREHEAT_LABELS {"WOOD", "PLA", "PLA_PRO", "PLA_PLUS", "PETG", "TPU"}  // Default: {"PLA", "PETG", "ABS", "WOOD", "TPU", "NYLON"}
+#define PREHEAT_HOTEND {195,     215,        225,       235,    245,   250}      // Default: {200,   240,    230,   170,    220,   250}
+#define PREHEAT_BED    { 62,      65,         70,        70,     70,    62}      // Default: { 60,    70,     90,    50,     50,    90}
 
 //================================================================================
 //============================ Power Supply Settings =============================
@@ -1200,7 +1200,7 @@
 // Probe Offset limits
 #define PROBE_Z_OFFSET_MIN_VALUE     -20.0f  // Default: -20.0f
 #define PROBE_Z_OFFSET_MAX_VALUE      20.0f  // Default: 20.0f
-#define PROBE_Z_OFFSET_DEFAULT_VALUE   0.0f  // Default: 0.0f
+#define PROBE_Z_OFFSET_DEFAULT_VALUE -03.11f  // Default: 0.0f
 
 // Home Offset limits
 #define HOME_Z_OFFSET_MIN_VALUE     -20.0f  // Default: -20.0f
@@ -1403,7 +1403,7 @@
  *                    (Material Light if KEYBOARD_MATERIAL_THEME is enabled).
  *     High Contrast: Use white and black colors for high contrast.
  */
-#define KEYBOARD_COLOR_LAYOUT 0  // Default: 0
+#define KEYBOARD_COLOR_LAYOUT 2  // Default: 0
 
 /**
  * QWERTY/QWERTZ Keyboard Layout (Terminal menu)
